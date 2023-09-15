@@ -20,6 +20,7 @@ button{
   right: 30px;
   border: none;
   z-index: 9;
+  background: cornflowerblue;
   img{
     object-fit: contain;
   }

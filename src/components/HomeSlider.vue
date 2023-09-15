@@ -1,5 +1,5 @@
 <template>
-  <Carousel class='slider' v-bind="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
+  <Carousel class='slider' v-bind="settings" :breakpoints="breakpoints" :autoplay="1500" :wrap-around="true">
     <Slide class="slide" v-for="slide in slides" :key="slide">
       <img :src="slide.imgUrl" :alt="slide.alt">
       <!-- {{ console.log(slide.imgUrl) }} -->

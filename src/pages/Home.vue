@@ -85,6 +85,7 @@ export default {
       position: relative;
       z-index: 3;
       overflow: hidden;
+      font-family: 'Black Ops One', cursive;
       &::after{
         content: '';
         position: absolute;

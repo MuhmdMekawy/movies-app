@@ -54,11 +54,11 @@ export default {
     <BackHome />
     <div class="container">
       <div class="content">
-        <div class="cont" v-for="movie in movies" :key="movie.id">
+        <RouterLink :to="'/movie/'+movie.id" class="cont" v-for="movie in movies" :key="movie.id">
           <div class="image"><img :src="movie.backdrop_path" :alt="movie.id" loading="lazy"></div>
           <div class="title"><h3>{{ movie.title }}</h3></div>
           <div class="badge bg-warning">{{ movie.vote_average }}</div>
-        </div>
+        </RouterLink>
       </div>
       <div class="pagination">
         <nav aria-label="Page navigation example">
