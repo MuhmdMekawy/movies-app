@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div class="image">
-    <img src="https://c4.wallpaperflare.com/wallpaper/1017/578/412/typography-1920x1080-error404-wallpaper-preview.jpg" alt="image" loading="lazy">
+    <img src="https://blog.thomasnet.com/hubfs/shutterstock_774749455.jpg" alt="image" loading="lazy">
   </div>
 </template>
 
@@ -19,7 +19,6 @@ export default {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background: #191615;
   img{
     object-fit: contain;
   }
