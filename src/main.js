@@ -4,7 +4,7 @@ import App from './App.vue'
 import Home from './pages/Home.vue'
 import Genre from './pages/Genre.vue'
 import DetailedMovie from './pages/DetailedMovie.vue'
-
+import NotFound from './pages/NotFound.vue'
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -12,7 +12,7 @@ const router = createRouter({
     { path: '/', name : 'Home' , component: Home },
     { path: '/genre/:name/:id', name : 'Genre' , component: Genre },
     { path: '/movie/:id', name : 'DetailedMovie' , component: DetailedMovie },
-    // { path: '/:catchAll(.*)', component: NotFound },
+    { path: '/:catchAll(.*)', component: NotFound },
   ]
 })
 
