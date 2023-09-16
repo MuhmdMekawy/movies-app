@@ -17,6 +17,14 @@ export default {
       MoviesLoading : false
     }
   },
+  computed: {
+    RouteTo(routeId) {
+      this.$route.push({ name: 'DetailedMovie', params: { id: routeId } })
+      this.$nextTick(() => {
+        window.location.reload()
+      });
+    }
+  },
   methods: {
     async fetchSpecificMovie() {
       return this.MoviesLoading = true ,
@@ -71,10 +79,10 @@ export default {
         <div class="offcanvas-body">
           <Loading v-if="MoviesLoading === true" />
           <div class="content" v-if="MoviesLoading === false">
-            <router-link :to="'/movie/'+item.id" class="cont" v-for="item in searchResult" :key="item.id">
+            <div @click="item.id" class="cont" v-for="item in searchResult" :key="item.id">
               <div class="image"><img :src="item.poster_path" alt="image" loading="lazy"></div>
               <h3>{{item.title}}</h3>
-            </router-link>
+            </div>
           </div>
           <div class="pagination" v-if="MoviesLoading === false">
             <nav aria-label="Page navigation example">
