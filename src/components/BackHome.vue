@@ -21,6 +21,11 @@ button{
   border: none;
   z-index: 9;
   background: cornflowerblue;
+  transition: 0.3s;
+  &:hover{
+    background: #fff;
+    border: 3px solid cornflowerblue;
+  }
   img{
     object-fit: contain;
   }

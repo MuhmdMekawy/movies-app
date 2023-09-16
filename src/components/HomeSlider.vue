@@ -5,7 +5,7 @@
       <!-- {{ console.log(slide.imgUrl) }} -->
       <div class="text">
         <h1>Movies App</h1>
-        <p>Hope You Enjoy...</p>
+        <p>Hope You Enjoy</p>
       </div>
     </Slide>
 
@@ -32,11 +32,11 @@ export default defineComponent({
   data() {
     return {
       slides: [
-        {imgUrl : 'https://image.tmdb.org/t/p/original/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg' , alt : 'slide image'},
-        {imgUrl : 'https://image.tmdb.org/t/p/original/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg' , alt : 'slide image'},
         {imgUrl : 'https://image.tmdb.org/t/p/original/8pjWz2lt29KyVGoq1mXYu6Br7dE.jpg' , alt : 'slide image'},
+        {imgUrl : 'https://image.tmdb.org/t/p/original/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg' , alt : 'slide image'},
         {imgUrl : 'https://image.tmdb.org/t/p/original/yF1eOkaYvwiORauRCPWznV9xVvi.jpg' , alt : 'slide image'},
         {imgUrl : 'https://image.tmdb.org/t/p/original/9m161GawbY3cWxe6txd1NOHTjd0.jpg' , alt : 'slide image'},
+        {imgUrl : 'https://image.tmdb.org/t/p/original/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg' , alt : 'slide image'},
         {imgUrl : 'https://image.tmdb.org/t/p/original/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg' , alt : 'slide image'},
         {imgUrl : 'https://image.tmdb.org/t/p/original/2ii07lSwHarg0gWnJoCYL3Gyd1j.jpg' , alt : 'slide image'},
         {imgUrl : 'https://image.tmdb.org/t/p/original/waBWlJlMpyFb7STkFHfFvJKgwww.jpg' , alt : 'slide image'},
@@ -86,6 +86,7 @@ export default defineComponent({
       transform: translate(-50% , -50%);
       z-index: 3;
       color: white;
+      font-family: 'Black Ops One', cursive;
       h1{
         font-size: 60px;
         font-weight: 600;
