@@ -1,6 +1,9 @@
 <script>
+import BackHome from '../components/BackHome.vue';
+
 export default {
-  name : 'NotFound'
+    name: 'NotFound',
+    components: { BackHome }
 }
 </script>
 
@@ -8,6 +11,7 @@ export default {
   <div class="image">
     <img src="https://blog.thomasnet.com/hubfs/shutterstock_774749455.jpg" alt="image" loading="lazy">
   </div>
+  <BackHome />
 </template>
 
 <style lang="scss" scoped>
