@@ -30,10 +30,10 @@ export default {
       return this.MoviesLoading = true ,
       await axios.get('https://advanced-movie-search.p.rapidapi.com/search/movie', {
         params: {query: `${this.movieName}` , page : this.searchPageNumber},
-          headers: {
-            'X-RapidAPI-Key': 'bf736c96cemsh65cd5b8678a7252p1251e7jsn83c9ef881654',
-            'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
-          }
+        headers: {
+    'X-RapidAPI-Key': '4ba37645e9msha7d66e7837b56b3p1572c4jsnb64c57e32452',
+    'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
+  }
       }).then((res) => {
         return this.MoviesLoading = false , this.searchResult = res.data.results
       })
@@ -42,9 +42,9 @@ export default {
       return this.loading =true,
       await axios.get("https://advanced-movie-search.p.rapidapi.com/genre/movie/list", {
         headers: {
-          'X-RapidAPI-Key': 'bf736c96cemsh65cd5b8678a7252p1251e7jsn83c9ef881654',
-          'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
-        }
+    'X-RapidAPI-Key': '4ba37645e9msha7d66e7837b56b3p1572c4jsnb64c57e32452',
+    'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
+  }
       }).then((res) => {
         return this.loading = false , this.genres = res.data.genres
       }).catch(error => {
@@ -65,7 +65,7 @@ export default {
   <div class="container"  v-if="loading === false">
     <div class="input">
       <input type="text" placeholder="Looking for a specific Movie?" v-model="movieName">
-      <button class="btn btn-primary" @click="fetchSpecificMovie" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+      <button class="btn btn-primary" @click="fetchSpecificMovie" v-if="movieName.length !== 0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
         </svg>
@@ -79,10 +79,10 @@ export default {
         <div class="offcanvas-body">
           <Loading v-if="MoviesLoading === true" />
           <div class="content" v-if="MoviesLoading === false">
-            <div @click="item.id" class="cont" v-for="item in searchResult" :key="item.id">
+            <RouterLink :to="'/movie/'+ item.id" @click="item.id" class="cont" v-for="item in searchResult" :key="item.id">
               <div class="image"><img :src="item.poster_path" alt="image" loading="lazy"></div>
               <h3>{{item.title}}</h3>
-            </div>
+            </RouterLink>
           </div>
           <div class="pagination" v-if="MoviesLoading === false">
             <nav aria-label="Page navigation example">

@@ -19,9 +19,9 @@ export default {
             await axios.get('https://advanced-movie-search.p.rapidapi.com/movies/getdetails', {
                 params: { movie_id: this.getMovieId },
                 headers: {
-                    'X-RapidAPI-Key': 'bf736c96cemsh65cd5b8678a7252p1251e7jsn83c9ef881654',
-                    'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
-                }
+    'X-RapidAPI-Key': '4ba37645e9msha7d66e7837b56b3p1572c4jsnb64c57e32452',
+    'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
+  }
             }).then((res) => {
                 return this.MovieData.push(res.data);
             }).catch((error) => {
