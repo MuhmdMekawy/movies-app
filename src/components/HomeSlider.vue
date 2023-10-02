@@ -95,13 +95,16 @@ export default defineComponent({
           font-size: 35px;
         }
         @media (max-width : 400px){
-          font-size: 28px;
+          font-size: 24px;
         }
       }
       p{
         margin-bottom: 0;
         font-size: 20px;
         font-weight: 400;
+        @media (max-width : 400px){
+          font-size: 16px;
+        }
       }
     }
   }
